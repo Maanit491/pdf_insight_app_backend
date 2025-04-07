@@ -72,7 +72,7 @@ async def upload_file(file: UploadFile = File(...), db: Session = Depends(get_db
         global query_engine
         query_engine = initialize_query_engine()
 
-        return JSONResponsappe({
+        return JSONResponse({
             "message": f"File uploaded successfully: {file.filename}",
             "filename": file.filename
         })
